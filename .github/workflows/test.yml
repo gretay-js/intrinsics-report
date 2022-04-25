@@ -32,7 +32,7 @@ jobs:
       - name: Deps
         run: |
           opam install ounit2
-          opam pin add ocaml_intrinsics https://github.com/janestreet/ocaml_intrinsics.git
+          opam pin add ocaml_intrinsics https://github.com/gretay-js/ocaml_intrinsics.git#debug_ci_macos
 
       - name: Build
         run: |
@@ -41,3 +41,4 @@ jobs:
       - name: Test
         run: |
           opam exec -- dune exec ./test.exe --  -ci true
+
